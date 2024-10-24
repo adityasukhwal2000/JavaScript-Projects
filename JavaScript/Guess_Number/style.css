@@ -1,0 +1,209 @@
+/* base styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a, li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+/* theme */
+:root {
+    --primary-col: #8e44ad;
+    --secondary-col: #f8efba;
+    --btnEasy: #480f97;
+    --btnHard: #2b0163;
+}
+
+/* layout */
+body {
+    background-color: var(--primary-col);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+/* module/reusable */
+
+p {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.heading {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-top: 3rem;
+    text-transform: capitalize;
+}
+
+button {
+    padding: 1.5rem 0;
+    min-width: 27rem;
+    border: none;
+    border-radius: 0.7rem;
+    color: #fff;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.section1, .section2{
+    margin: 5rem 0;
+}
+
+
+/***** section1  *****/
+
+.section1,
+.section2 {
+    background-color: var(--secondary-col);
+    border: 0.5rem solid black;
+    border-radius: 0.7rem;
+    padding: 4rem;
+    width: 30%;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+.btn-description {
+    margin: 1rem 0 2rem 0;
+}
+
+.btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    & .easy {
+        font-size: 1.8rem;
+        background-color: var(--btnEasy);
+
+        &:hover {
+            background-color: #3f0f83;
+        }
+    }
+}
+
+.hard,
+.new-game {
+    font-size: 1.8rem;
+    background-color: var(--btnHard);
+
+    &:hover {
+        background-color: rgb(31, 3, 71);
+    }
+}
+
+/***** End section1  *****/
+
+/***** section2 *****/
+.gif {
+    background-image: url(./assets/win_gif.gif);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+
+.input_number {
+    margin: 2rem 0 3rem 0;
+}
+
+input {
+    border: 0.2rem solid rgba(128, 128, 128, 0.596);
+    outline: none;
+    padding: 1rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.attempt_guess_wrapper {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-transform: capitalize;
+}
+
+.attempts,
+.guesses {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    & span {
+        color: red;
+        font-size: 1.6rem;
+        font-weight: bold;
+        overflow-wrap: anywhere;
+    }
+}
+
+/***** End section2 *****/
+
+/* extra */
+
+.hidden {
+    display: none;
+}
+
+/***** media queries *****/
+
+@media (width < 1200px) {
+    html {
+        font-size: 58%;
+    }
+
+    button {
+        min-width: 20rem;
+    }
+
+    .section1,
+    .section2 {
+        width: 48%;
+    }
+}
+
+@media (width < 768px) {
+    html {
+        font-size: 53%;
+    }
+
+    .section1,
+    .section2 {
+        width: 58%;
+    }
+}
+
+@media (width < 575px) {
+    html {
+        font-size: 43%;
+    }
+
+    button {
+        max-width: 10rem;
+    }
+
+    .section1,
+    .section2 {
+        width: 68%;
+    }
+}
+
+/***** End media queries *****/

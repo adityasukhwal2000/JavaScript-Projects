@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is Guessing Number game. Here, you have to guess number and you get the number of chances for it."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Jost:wght@300;400;500;700&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Guess Number - Can you guess correct??</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+
+  </head>
+  <body onload="randomNum()">
+    <section class="section1">
+      <h2 class="heading">Guess the random number between 1-100</h2>
+
+      <div class="logo">
+        <img src="./assets/logo.webp" alt="game picture" />
+      </div>
+
+      <div class="next-page">
+        <p class="btn-description">Select The Difficulty</p>
+
+        <div class="btn-wrapper">
+          <button class="easy">Easy 10 attempts</button>
+          <button class="hard">Hard 5 attempts</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section2 hidden">
+      <div class="newGame_btn">
+        <button class="new-game">New Game</button>
+      </div>
+
+      <h2 class="heading user_guess">Your Guess</h2>
+
+      <div class="input_number">
+        <input
+          class="input_guess"
+          type="number"
+          placeholder="Enter Guess Number"
+          id="number"
+        />
+      </div>
+
+      <div class="attempt_guess_wrapper">
+        <p class="attempts">
+          Number of previous attempts <span class="num_attempt">0</span>
+        </p>
+
+        <p class="guesses">
+          Number of previous guesses <span class="num_guess">-</span>
+        </p>
+      </div>
+    </section>
+
+  </body>
+</html>
