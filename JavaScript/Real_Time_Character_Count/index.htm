@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font family link start-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Jost:wght@300;400;500;700&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font family link end -->
+    <title>Real Time Character Count</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+  </head>
+  <body>
+    <section class="main-container parent-section">
+      <h1 class="main-heading">Real Time Character Counter</h1>
+      <p class="content-para">
+        Check your English text for grammar, spelling, and punctuation errors
+        with real time char counter.
+      </p>
+
+      <div class="writing-area--div">
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Type you text here..."
+          maxlength="150"
+        ></textarea>
+        <button class="copyBtn" >Copy Text</button>
+      </div>
+
+      <div class="para-wrap">
+        <p>Total character : <span id="total-counter">0</span></p>
+        <p>Remaining : <span id="remaining-counter">150</span></p>
+      </div>
+    </section>
+
+  </body>
+</html>

@@ -1,0 +1,129 @@
+/* base style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif, serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* theme */
+:root {
+    --main-bgCol: hsl(0, 7%, 97%);
+    --btn-bgCol: #1db966;
+    --shadow: 0 0.2rem 0.7rem 0.1rem rgba(0, 0, 0, 0.2);
+    --para-col: rgb(156, 154, 154);
+}
+
+/* layout */
+
+.main-container{
+    max-width: 142rem;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+body {
+    background-color: var(--main-bgCol);
+    display: flex;
+    justify-content: center;
+}
+
+
+/* module/reusable */
+
+p {
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+    line-height: 1.56;
+    color: var(--para-col);
+}
+
+button {
+    padding: 1rem 2.2rem;
+    background-color: var(--btn-bgCol);
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #0a9e4f;
+    }
+}
+
+/***** parent-section *****/
+
+.parent-section {
+    text-align: center;
+}
+
+.main-heading {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+    line-height: 1.56;
+    margin-top: 8rem;
+}
+
+.content-para {
+    margin: 1rem 0 6rem 0;
+    max-width: 52rem;
+}
+
+.writing-area--div {
+    position: relative;
+
+    & .copyBtn {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+textarea {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    font-size: 2rem;
+    outline: none;
+    height: 25rem;
+    resize: none;
+    border-radius: 1rem;
+
+    &:focus {
+        border: 0.1rem solid rgba(43, 45, 56, 0.3);
+    }
+
+}
+
+
+.para-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+/***** End parent-section *****/
+
+@media (width < 575px) {
+    html {
+        font-size: 48%;
+    }
+
+    .para-wrap {
+        display: flex;
+        margin: 2rem 0;
+        gap: 1rem;
+        flex-direction: column;
+    }
+}
