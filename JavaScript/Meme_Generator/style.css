@@ -1,0 +1,94 @@
+/* base style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* theme */
+
+:root {
+  --body-bg: hsl(0, 0%, 92.5%);
+  --btn-text-col: black;
+  --card-bg: rgb(247, 238, 238);
+  --shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* layout */
+
+.main-container {
+  max-width: 142rem;
+  margin: 0 auto;
+  padding: 8.4rem 1.4rem;
+  text-align: center;
+}
+
+body {
+  background-color: var(--body-bg);
+}
+
+/*  */
+
+.btn {
+  margin-bottom: 3rem;
+  padding: 1rem 2rem;
+  border-top: 4rem;
+  border-bottom: 4rem;
+  color: green;
+  background-color: gainsboro;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    padding: 1rem 3rem;
+    border-top: 6rem;
+    border-bottom: 6rem;
+    scale: 1.1;
+    transform: translateY(4px);
+    background-color: rgb(187, 185, 185);
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.section-meme {
+  background-color: var(--card-bg);
+  padding: 4rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.author {
+  font-size: 1.3rem;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+}
