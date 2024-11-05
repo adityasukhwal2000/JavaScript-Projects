@@ -1,0 +1,146 @@
+/* base style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif, serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+li {
+  list-style-position: inside;
+}
+
+/* theme */
+:root {
+  --trans: all 0.4s linear;
+}
+
+/* layout */
+
+body {
+  background-color: hsl(0, 0%, 92%);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.accordion-section {
+  width: 50%;
+  max-width: 142rem;
+  margin: 0 auto;
+}
+
+/* module/reusable */
+
+h2 {
+  font-size: 2.4rem;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.1rem;
+  line-height: 1.56;
+}
+
+p,
+li {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.1rem;
+  line-height: 1.56;
+}
+
+.number {
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+/***** accordion-section *****/
+
+.accordion-div {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 3rem;
+  padding: 3rem;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.4rem;
+  margin: 3rem 0;
+}
+
+.hiddenBox {
+  grid-column: 2/3;
+}
+
+.hiddenBox {
+  display: none;
+}
+
+.active {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    border-top: 3px solid #146b74;
+    border-radius: 0.4rem;
+    animation: borderTop 1s linear forwards;
+  }
+}
+
+@keyframes borderTop {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.active .hiddenBox {
+  display: block;
+  transition: var(--trans);
+}
+
+li {
+  margin: 1.6rem 0;
+}
+
+.icons {
+  width: 3rem;
+  height: 3rem;
+  color: #146b74;
+}
+
+/***** End accordion-section *****/
+
+@media (width <= 768px) {
+  html {
+    font-size: 58%;
+  }
+  .accordion-section {
+    width: 80%;
+  }
+}
+
+@media (width < 425px) {
+  html {
+    font-size: 40%;
+  }
+  .accordion-section {
+    width: 95%;
+  }
+
+  p,
+  li {
+    font-size: 1.7rem;
+  }
+}
