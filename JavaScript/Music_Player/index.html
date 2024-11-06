@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Music Player website. Here, you can store music of your choice. Can play & pause music. Having next, previous & progress bar functionality also."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="music-section">
+      <h2 class="music-name">Music Name</h2>
+      <h3 class="artist-name">Artist</h3>
+      <div class="music-img">
+        <img class="song-img" src="./images/song1.png" alt="song pic" />
+      </div>
+
+      <div class="progress-bar--container">
+        <div class="duration-wrapper">
+            <div class="current-timing">0:00</div>
+            <div class="total-timing">4:10</div>
+        </div>
+        <div class="progress-bar--div">
+            <div class="progress-bar"></div>
+        </div>
+      </div>
+
+      <audio src="./songs/song1.mp3"></audio>
+
+      <div class="music-controls">
+        <i class="fa-solid fa-backward" id="previous" title="Previous"></i>
+        <i class="fa-solid fa-play" id="play" title="Play"></i>
+        <i class="fa-solid fa-forward" id="next" title="Next"></i>
+      </div>
+    </div>
+  </body>
+</html>
