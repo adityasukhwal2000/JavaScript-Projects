@@ -1,4 +1,5 @@
 //? Taking References of elements
+
 const msg = document.querySelector(".msg");
 const startBtn = document.querySelector(".btn");
 const textArea = document.getElementById("type-text");
@@ -48,7 +49,6 @@ const endTyping = () => {
   let speed = Math.round((wordCount / totalTime) * 60);
 
   let finalMsg = `Your typing speed is ${speed} words per minutes.`;
-
   finalMsg += compareWords(msg.textContent, totalTypeWord);
 
   msg.textContent = finalMsg;
@@ -71,6 +71,7 @@ const compareWords = (str1, str2) => {
       count++;
     }
   });
+
   const errorWords = text1.length - count;
   return ` ${count} correct words out of ${text1.length} words and the total number of errors are ${errorWords}.`;
 };
